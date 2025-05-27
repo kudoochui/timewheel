@@ -292,3 +292,8 @@ func (t *timeWheel) Run() {
 		}
 	}
 }
+
+func (t *timeWheel) Tick() {
+	t.curTimePoint = get10Ms()
+	t.run(get10Ms)
+}
